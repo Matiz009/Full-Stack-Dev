@@ -83,12 +83,7 @@ checkVoteEligibility(16); //You cannot cast your vote.
 
 
 
-while (turn < 100000) {
-  let randomNumber = Math.floor(Math.random() * 70) + 1;
-  console.log("Random Number: " + randomNumber);
-  checkVoteEligibility(randomNumber); //You can cast your vote.
-  turn++;
-}
+// cls
 
 5.3
 
@@ -131,5 +126,34 @@ console.log(ali.getDetails()); //Name: Ali, Age: 20, Roll No: 101
 //reference data types
 //object, array, function, date, regex, map, set, weakmap, weakset
 
+
+
+// arrow function
+const add = (a, b) => a + b;
+
+//difference between let and var and const
+
+//let and const are block scoped, var is function scoped
+
+var news = "This is a news headline";
+var news = "This is a news headline 2"; // redeclaration is allowed in var
+
+console.log(news); // This is a news headline 2
+
+
+let news2 = "This is a news headline 3";
+news2 = "This is a news headline 4"; // redeclaration is not allowed in let but reassignment is allowed
+
+console.log(news2); // This is a news headline 4
+
+
+const news3 = "This is a news headline 5";
+//news3 = "This is a news headline 6"; // redeclaration is not allowed in const and reassignment is also not allowed
+console.log(news3); // This is a news headline 5
+
+const fruits =
+["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits.splice(2,0)); // ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
 
 
